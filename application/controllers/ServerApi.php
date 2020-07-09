@@ -81,3 +81,18 @@ class ServerApi extends CI_Controller {
     }   
 } 
  
+/**
+ * 
+ * CREATE TABLE `android_api2`.`as` ( 
+ *      `id` INT(11) NOT NULL AUTO_INCREMENT , 
+ *      `name` VARCHAR(255) NOT NULL , 
+ *      `lainnya` VARCHAR(255) NOT NULL , 
+ *      PRIMARY KEY (`id`)) ENGINE = InnoDB;
+ * 
+ * INSERT INTO `tb_staff` (`staff_id`, `staff_name`, `staff_hp`, `staff_alamat`) 
+ * VALUES (NULL, 'Ismi Nururrizqi', '08987159874', 'tegalwangi talang tegal'), 
+ *        (NULL, 'uhuk', '0284375982347', 'apasih yah keder')
+ * 
+ * http://localhost/android_api2/index.php/serverapi/getdata
+ * 
+ */
