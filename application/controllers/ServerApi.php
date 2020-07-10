@@ -79,6 +79,23 @@ class ServerApi extends CI_Controller {
         }   
         echo json_encode($response);   
     }   
+
+    public function search(){
+        $name   = $this->input->post('name'); 
+        $q = $this->db->query('SELECT * FROM tb_staff WHERE staff_name LIKE "%'.$name.'%"');  
+         
+        if ($q -> num_rows() > 0) {   
+            $response['pesan']  = 'data ada';   
+            $response['status'] = 200;   
+            // 1 row   
+            $response['staff'] = $q->row();   
+            $response['staff'] = $q->result();   
+        } else {  
+            $response['pesan']  = 'data tidak ada';   
+            $response['status'] = 404;   
+        }   
+        echo json_encode($response);  
+    }
 } 
  
 /**
